@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VPR & AiE | Electrical Installation Solutions - Powering Your World Together</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+  body{color:#222;background:#fff}
+  a{text-decoration:none}
+  .container{max-width:1100px;margin:auto;padding:0 18px}
+  /* TOP BAR */
+  .topbar{background:#0A2A6B;color:#fff;font-size:13px;padding:8px 0}
+  .topbar .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .topbar a{color:#fff}
+  /* NAV */
+  nav{position:sticky;top:0;background:#fff;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+  nav .container{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+  .logo{font-weight:900;font-size:22px;color:#0A2A6B;line-height:1}
+  .logo span{color:#F26522}
+  .logo small{font-size:11px;color:#666;font-weight:400;display:block}
+  .nav-links{display:flex;gap:18px;font-weight:700;font-size:14px}
+  .nav-links a{color:#222}
+  .btn{background:#F26522;color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;display:inline-block;border:none;cursor:pointer}
+  .btn-blue{background:#0A2A6B}
+  .btn-white{background:#fff;color:#0A2A6B}
+  /* SLIDER */
+  .swiper{width:100%;height:480px}
+  .swiper-slide{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px}
+  .swiper-slide h1{font-size:36px;line-height:1.1;max-width:700px}
+  .swiper-slide p{font-size:16px;max-width:600px;margin:12px 0}
+  /* SECTIONS */
+  section{padding:55px 0}
+  h2{font-size:28px;color:#0A2A6B;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:#666;margin-bottom:30px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#f7f8ff;padding:22px;border-radius:14px;transition:all .3s ease;cursor:pointer}
+  .card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 30px rgba(0,0,0,.15);background:#0A2A6B;color:#fff}
+  .card h3{margin:10px 0 8px}
+  .card p{font-size:14px;line-height:1.5}
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+  .about-box{background:#0A2A6B;color:#fff;padding:25px;border-radius:14px}
+  .about-box h3{margin-bottom:10px}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center}
+  .step{background:#fff;border:2px solid #eee;padding:18px 10px;border-radius:12px}
+  .step b{font-size:28px;color:#F26522}
+  /* FORM */
+  input,select,textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ddd;border-radius:8px;font-size:15px}
+  .form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+  /* ANIMATIONS */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes zoomIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,101,34,.7)}70%{box-shadow:0 0 0 15px rgba(242,101,34,0)}100%{box-shadow:0 0 0 0 rgba(242,101,34,0)}}
+  @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+  .animate-hero{animation:zoomIn 1s ease forwards}
+  .animate-fade{animation:fadeUp 1s ease forwards}
+  .animate-pulse{animation:pulse 2s infinite}
+  .animate-float{animation:float 2s ease-in-out infinite}
+  .delay-1{animation-delay:.3s}.delay-2{animation-delay:.6s}.delay-3{animation-delay:.9s}
+  .reveal{opacity:0;transform:translateY(40px);transition:all .8s ease}
+  .reveal.active{opacity:1;transform:translateY(0)}
+  /* POPUP */
+  #popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:999}
+  #popup > div{background:#fff;max-width:400px;margin:70px auto;padding:22px;border-radius:14px}
+  footer{background:#0A162E;color:#fff;padding:40px 0 20px;text-align:center}
+  @media(max-width:768px){.grid,.about,.form-wrap,.steps{grid-template-columns:1fr}.swiper{height:420px}.swiper-slide h1{font-size:28px}.nav-links{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="container">
+  <span>📍 Plot 19B, Oshodi/Apapa Expressway, Ilasamaja, Lagos</span>
+  <span>📞 <a href="tel:+234803073941">0803 073 941</a> | ✉️ valueplusresourcesltd@gmail.com</span>
+</div></div>
+
+<nav><div class="container">
+  <div class="logo">VPR <span>& AiE</span><small>VALUE PLUS + AD. INFINITI ELECTRICAL</small></div>
+  <div class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#quote">Get Quote</a></div>
+  <button class="btn animate-pulse" onclick="openPopup()">Request Site Visit</button>
+</div></nav>
+
+<!-- AUTOMATIC SLIDE -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background:linear-gradient(rgba(10,42,107,.75),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200');background-size:cover;">
+      <h1 class="animate-hero">Electrical Installation Solutions</h1>
+      <p class="animate-fade delay-1">A Joint Venture of Value Plus Resources Ltd & Ad. Infiniti Electrical Ltd<br><b>...Powering Your World Together</b></p>
+      <div class="animate-fade delay-2"><a class="btn animate-pulse" href="#quote">Get a Free Quote →</a> <a class="btn btn-white" href="#projects">View Projects</a></div>
+    </div>
+    <div class="swiper-slide" style="background:#0A2A6B;">
+      <h1>House & Estate Wiring</h1><p>Complete wiring for homes, flats & estates. Safe, neat, certified.</p>
+      <a class="btn" onclick="openPopup()">Request Site Visit</a>
+    </div>
+    <div class="swiper-slide" style="background:#F26522;">
+      <h1>Factories & Commercial Buildings</h1><p>Transformers, Panels, Industrial Installation & Maintenance.</p>
+      <a class="btn" style="background:#fff;color:#F26522" href="tel:+234803073941">Call: 0803 073 941</a>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about"><div class="container">
+  <h2 class="reveal">About The Joint Venture</h2><p class="sub reveal">Two trusted companies, one power.</p>
+  <div class="about">
+    <div class="reveal"><h3 style="color:#0A2A6B">Value Plus Resources Ltd + Ad. Infiniti Electrical Ltd</h3><p style="margin:12px 0;line-height:1.7">We deliver complete electrical installation for homes, offices, factories and estates across Lagos and Nigeria. From new wiring to transformers, solar and maintenance — we do it safely, on time, and to standard.</p>
+    <p>✅ Licensed & Certified Electricians<br>✅ Quality Materials Only<br>✅ Safety First<br>✅ After-Installation Support</p>
+    <br><a href="VPR-AiE-Profile.pdf" download class="btn btn-blue">📄 Download Company Profile (PDF)</a>
+    </div>
+    <div class="about-box reveal"><h3>Why Clients Trust Us</h3><p style="line-height:1.8;margin-top:10px">• 100+ Installations Completed<br>• Fast Response in Lagos<br>• Free Site Inspection & Quotation<br>• Warranty on Work Done<br>• 24/7 Emergency Support</p></div>
+  </div>
+</div></section>
+
+<!-- SERVICES -->
+<section id="services" style="background:#f7f8ff"><div class="container">
+  <h2 class="reveal">Our Services</h2><p class="sub reveal">Everything electrical, under one roof.</p>
+  <div class="grid">
+    <div class="card reveal"><div style="font-size:30px">🏠</div><h3>Residential Wiring</h3><p>Houses, flats, duplexes, estates. New wiring, rewiring, DB & sockets.</p></div>
+    <div class="card reveal"><div style="font-size:30px">🏢</div><h3>Commercial Buildings</h3><p>Offices, malls, schools, hospitals. Full electrical design & installation.</p></div>
+    <div class="card reveal"><div style="font-size:30px">🏭</div><h3>Industrial Installation</h3><p>Factories, warehouses, 3-phase, motors, panels & power distribution.</p></div>
+    <div class="card reveal"><div style="font-size:30px">⚡</div><h3>Transformers & Panels</h3><p>Substations, changeover, distribution boards, load balancing.</p></div>
+    <div class="card reveal"><div style="font-size:30px">☀️</div><h3>Solar & Inverter</h3><p>Solar panels, inverters, batteries. Light up, even without PHCN.</p></div>
+    <div class="card reveal"><div style="font-size:30px">🛠️</div><h3>Maintenance & Repairs</h3><p>Fault tracing, tripping issues, upgrades, 24/7 emergency repairs.</p></div>
+  </div>
+</div></section>
+
+<!-- PROJECTS -->
+<section id="projects"><div class="container">
+  <h2 class="reveal">Our Projects</h2><p class="sub reveal">Replace these photos with your real work photos.</p>
+  <div class="grid">
+    <div class="card reveal"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600" style="width:100%;border-radius:10px"><h3>20-Flat Estate - Ilasamaja</h3><p>Complete wiring + panels</p></div>
+    <div class="card reveal"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600" style="width:100%;border-radius:10px"><h3>Factory Installation - Oshodi</h3><p>Industrial panels & motors</p></div>
+    <div class="card reveal"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600" style="width:100%;border-radius:10px"><h3>Solar Installation - Lekki</h3><p>5kVA Solar + Inverter</p></div>
+  </div>
+  <div style="text-align:center;margin-top:25px"><p style="color:#666;font-size:13px">Trusted By</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px"><span style="border:1px solid #ddd;padding:10px 20px;border-radius:20px">Ilasamaja Estates</span><span style="border:1px solid #ddd;padding:10px 20px;border-radius:20px">Oshodi Factories</span><span style="border:1px solid #ddd;padding:10px 20px;border-radius:20px">Private Homes</span><span style="border:1px solid #ddd;padding:10px 20px;border-radius:20px">Schools & Offices</span></div></div>
+</div></section>
+
+<!-- PROCESS -->
+<section style="background:#0A2A6B;color:#fff"><div class="container">
+  <h2 style="color:#fff" class="reveal">How We Work</h2><p class="sub reveal" style="color:#ddd">Simple, transparent, professional.</p>
+  <div class="steps">
+    <div class="step reveal" style="color:#222"><b>1</b><h3>Site Inspection</h3><p>We visit & assess</p></div>
+    <div class="step reveal" style="color:#222"><b>2</b><h3>Free Quotation</h3><p>No hidden charges</p></div>
+    <div class="step reveal" style="color:#222"><b>3</b><h3>Design & Approval</h3><p>You approve plan</p></div>
+    <div class="step reveal" style="color:#222"><b>4</b><h3>Installation</h3><p>Safe & neat work</p></div>
+    <div class="step reveal" style="color:#222"><b>5</b><h3>Testing & Handover</h3><p>We test & hand over</p></div>
+  </div>
+</div></section>
+
+<!-- QUOTE -->
+<section id="quote"><div class="container">
+  <h2 class="reveal">Get a Free Quote</h2><p class="sub reveal">Fill this — it goes straight to our WhatsApp.</p>
+  <div class="form-wrap">
+    <div class="reveal">
+      <input id="qName" placeholder="Your Name *">
+      <input id="qPhone" placeholder="Phone Number *">
+      <input id="qLoc" placeholder="Site Location e.g Lekki, Ikeja">
+      <select id="qType"><option>New Wiring</option><option>Rewiring</option><option>Transformer / Panel</option><option>Solar / Inverter</option><option>Maintenance / Repair</option></select>
+      <textarea id="qMsg" rows="3" placeholder="Tell us about the building... e.g 4-bedroom duplex"></textarea>
+      <button class="btn" style="width:100%" onclick="sendQuote()">Send Quote Request on WhatsApp →</button>
+    </div>
+    <div class="reveal" style="background:#0A2A6B;color:#fff;padding:25px;border-radius:14px">
+      <h3>Contact Us Directly</h3><br>
+      <p>📍 Plot 19B, Oshodi/Apapa Expressway, Ilasamaja, Lagos<br><br>
+      📞 0803 073 941<br>📞 0807 170 4754<br>📞 0906 738 2366<br><br>
+      ✉️ valueplusresourcesltd@gmail.com<br><br>
+      ⏰ Mon - Sat: 8am - 6pm<br>🚨 Emergency: 24/7</p><br>
+      <a class="btn btn-white" href="https://wa.me/234803073941">Chat on WhatsApp</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="container">
+  <h3>VPR & AiE</h3><p>Value Plus Resources Ltd & Ad. Infiniti Electrical Ltd Joint Venture</p><p style="margin:10px 0">...Powering Your World Together</p><p style="font-size:13px;color:#aaa">© 2026 VPR & AiE. All Rights Reserved. | Plot 19B, Oshodi/Apapa Expressway, Ilasamaja, Lagos</p>
+</div></footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/234803073941?text=Hello%20VPR%20%26%20AiE,%20I%20need%20electrical%20installation" class="animate-float" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;z-index:999;font-weight:bold">💬 WhatsApp Us</a>
+
+<!-- POPUP -->
+<div id="popup"><div>
+  <h3>Request Site Visit</h3>
+  <input id="pName" placeholder="Your Name">
+  <input id="pPhone" placeholder="Phone Number">
+  <input id="pLocation" placeholder="Site Location e.g Lekki">
+  <select id="pType"><option>New Wiring</option><option>Rewiring</option><option>Transformer / Panel</option><option>Solar / Inverter</option></select>
+  <button class="btn" style="width:100%" onclick="sendVisit()">Send to WhatsApp</button>
+  <p onclick="closePopup()" style="text-align:center;cursor:pointer;margin-top:12px">Close</p>
+</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+new Swiper('.mySwiper',{loop:true,autoplay:{delay:3000,disableOnInteraction:false},pagination:{el:'.swiper-pagination',clickable:true},effect:'fade',fadeEffect:{crossFade:true},speed:800});
+function openPopup(){document.getElementById('popup').style.display='block'}
+function closePopup(){document.getElementById('popup').style.display='none'}
+function sendVisit(){let n=document.getElementById('pName').value,p=document.getElementById('pPhone').value,l=document.getElementById('pLocation').value,t=document.getElementById('pType').value;window.open("https://wa.me/234803073941?text="+encodeURIComponent("Hello VPR & AiE, I want SITE VISIT. Name: "+n+" Phone: "+p+" Location: "+l+" Work: "+t))}
+function sendQuote(){let n=document.getElementById('qName').value,p=document.getElementById('qPhone').value,l=document.getElementById('qLoc').value,t=document.getElementById('qType').value,m=document.getElementById('qMsg').value;window.open("https://wa.me/234803073941?text="+encodeURIComponent("Hello VPR & AiE, NEW QUOTE. Name: "+n+" Phone: "+p+" Location: "+l+" Type: "+t+" Details: "+m))}
+// Scroll reveal
+window.addEventListener('scroll',()=>{document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top < window.innerHeight-100){el.classList.add('active')}})});
+window.dispatchEvent(new Event('scroll'));
+</script>
+</body>
+</html>
